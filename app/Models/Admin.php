@@ -8,10 +8,10 @@ Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     use Notifiable;
-    protected $guard = 'user';
+    protected $guard = 'admin';
     protected $fillable = [
         'name', 'email', 'password',
     ];
