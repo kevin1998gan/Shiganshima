@@ -41,9 +41,8 @@
                 <li class="navPage-item">adult</li>
                 <li class="navPage-item">baby</li>
                 <li class="navPage-item">footwear</li>
-                <a class="dropdown-item" href="{{ url('logoutUser') }}" onclick="event.preventDefault();
-
-document.getElementById('logout-form').submit();">
+                <a class="dropdown-item" href="{{ url('logoutUser') }}" 
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                 </a>
                 <form id="logout-form" action="{{ url('logoutUser') }}" method="POST" style="display: none;">

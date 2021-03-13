@@ -42,11 +42,11 @@
                 <li class="navPage-item">adult</li>
                 <li class="navPage-item">baby</li>
                 <li class="navPage-item">footwear</li>
-                <a class="dropdown-item" href="{{ route('logout') }}"
+                <a class="dropdown-item" href="{{ url('logout') }}"
                     onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                 </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             </ul>

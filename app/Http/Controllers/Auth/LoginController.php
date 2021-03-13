@@ -73,7 +73,10 @@ class LoginController extends Controller
         ], $request->get('remember'))) {
             return redirect()->intended('user');
         }
-        return back()->withInput($request->only('email', 'remember'));
+        return back()->withInput($request->only('email', 'remember'))
+        ->withErrors([
+            'wrong' => 'You entered wrong password or wrong Email!',
+        ]);
     }
 
     public function logout()
