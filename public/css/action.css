@@ -1,0 +1,81 @@
+
+/* To override from bootstrap
+=========================================== */
+* {
+    font-family: serif;
+}
+body {
+    overflow-x: hidden;
+}
+
+/* Logo and background
+=========================================== */
+header {
+    position: relative;
+    height: 200px;
+    background-color: aliceblue;
+}
+.logo {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 56px;
+    letter-spacing: 6px;
+	font-weight: bold;
+}
+.cute {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    font-size: 18px;
+    transform: translate(-50%,0);
+}
+
+/* Small navbar
+=========================================== */
+.nabi {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    padding: 0 50px;
+    line-height: 60px;
+    font-size: 20px;
+    background-color: #f0f1ff;
+}
+.back,
+.logout {
+    cursor: pointer;
+}
+.container {
+    margin-top: 50px;
+}
+
+/* Border for hovering the nav items
+=========================================== */
+.nabi > div {
+    position: relative;
+}
+.nabi > div::after {
+    content: '';
+    position: absolute;
+    transition: all 0.4s ease-in;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    border: 3px solid black;
+    opacity: 0;
+    transform: skewX(-35deg);
+}
+.nabi > div:hover::after {
+    opacity: 1;
+    right: 0px;
+}
+
+/* CSS for Hovering field title
+=========================================== */
+thead span:hover {
+    color: pink;
+}
