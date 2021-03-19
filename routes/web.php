@@ -41,6 +41,9 @@ Route::group(['middleware' => 'auth:user'], function () {
 Route::group(['middleware' => 'auth:admin'], function () {
 
     Route::view('/admin', 'admin');
+    Route::view('/action', 'action');
+    Route::view('/update', 'update');
+    
 });
 
 Route::group(['middleware' => 'auth:user'], function () {

@@ -1,0 +1,233 @@
+
+
+body {
+    background-color: darkgray;
+}
+* {
+    color: white;
+}
+
+/* Landing section
+=========================================== */
+.partial-landing {
+    height: 650px;
+    background-image: url('/img/admin/bg1.jpg');
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.logo {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    letter-spacing: 6px;
+}
+.logo:hover {
+	color: gray;
+}
+.logo-up {
+	font-size: 40px;
+	font-family: "MS PGothic", Osaka, Arial, sans-serif;
+}
+.logo-down {
+	font-size: 20px;
+}
+.user {
+    position: absolute;
+    font-size: 26px;
+    left: 105px;
+    bottom: 50px;
+}
+.navigate {
+    display: flex;
+    width: 250px;
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    justify-content: space-between;
+    font-size: 26px;
+}
+.quit {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    font-size: 26px;
+}
+.add,
+.edit,
+.delete {
+    cursor: pointer;
+    padding: 0 0 5px;
+}
+.add:hover,
+.edit:hover,
+.delete:hover {
+    border-bottom: 2px solid white;
+    
+}
+.admin {
+    position: absolute;
+    top: 135px;
+    left: 100px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+/* Some dummy text under landing section
+=========================================== */
+main {
+    height: 75px;
+    position: relative;
+	background-image: linear-gradient(to right, #4c5a74, #080808);
+}
+.welcom {
+    position: absolute;
+    top: 37.5px;
+    left: 100px;
+    transform: translateY(-50%);
+    font-size: 21px;
+    
+}
+.today {
+    position: absolute;
+    top: 37.5px;
+    right: 100px;
+    transform: translateY(-50%);
+    font-size: 21px;
+}
+
+/* Section for Add form
+=========================================== */
+.hidden {
+    overflow: hidden;
+    position: relative;
+    height: 805px;
+	background-color: dimgrey;
+}
+.hidden h1 {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+}
+.insert-form {
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+/* Form styling
+=========================================== */
+#title,
+#price,
+#photo,
+#quantity,
+#category,
+#description {
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    background-color: #474a59;
+    border-radius: 5px;
+    font-size: 20px;
+}
+#description {
+    height: 150px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+
+}
+#submit {
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #4c5a74 !important;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Background embellishment
+=========================================== */
+.coolthing1 {
+    position: absolute;
+    font-size: 11em;
+    top: 250px;
+    left: -80px;
+    opacity: 0.55;
+    transform: rotate(50deg);
+}
+.imcircle {
+    position: absolute;
+    top: -500px;
+    right: -265px;
+    width: 750px;
+    height: 750px;
+    border: 20px solid white;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.gradientboost {
+    position: absolute;
+    top: 260px;
+    right: -75px;
+    transform: rotate(40deg);
+    font-size: 7.5em;
+    opacity: 0.45;
+}
+
+/* Footer
+=========================================== */
+footer {
+    height: 70px;
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    font-size: 19px;
+}
+.gibber {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Enable smooth scrolling
+=========================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Universal styling
+=========================================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit
+}
+
+table, tr, td {
+    padding: 5px;
+}
+
+textarea {
+    resize: none;
+}
