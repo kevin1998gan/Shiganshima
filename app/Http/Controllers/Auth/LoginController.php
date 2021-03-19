@@ -50,12 +50,13 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => $request->password
         ], $request->get('remember'))) {
+        
             return redirect()->intended('/admin');
         }
         return back()->withInput($request->only('email', 'remember'))
-        ->withErrors([
-            'wrong' => 'You entered wrong password or wrong Email!',
-        ]);
+            ->withErrors([
+                'wrong' => 'You entered wrong password or wrong Email!',
+            ]);
     }
     public function showUserLoginForm()
     {
@@ -74,9 +75,9 @@ class LoginController extends Controller
             return redirect()->intended('user');
         }
         return back()->withInput($request->only('email', 'remember'))
-        ->withErrors([
-            'wrong' => 'You entered wrong password or wrong Email!',
-        ]);
+            ->withErrors([
+                'wrong' => 'You entered wrong password or wrong Email!',
+            ]);
     }
 
     public function logout()

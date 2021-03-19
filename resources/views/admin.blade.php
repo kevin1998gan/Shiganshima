@@ -19,7 +19,7 @@
 			<div class="logo-up">シガンシナ</div>
             <div class="logo-down">shiganshina clothes</div>
 		</div>
-        <div class="user" title="whoami">ADMIN NAME</div>
+        <div class="user" title="whoami">Welcome Back {{$user['name']}}!</div>
 
         <!-- Navbar
         =========================================== -->

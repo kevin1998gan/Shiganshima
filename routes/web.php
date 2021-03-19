@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -40,7 +41,7 @@ Route::group(['middleware' => 'auth:user'], function () {
 });
 Route::group(['middleware' => 'auth:admin'], function () {
 
-    Route::view('/admin', 'admin');
+    Route::get('/admin', [AdminController::class, 'getName']);
     Route::view('/action', 'action');
     Route::view('/update', 'update');
     
