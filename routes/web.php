@@ -42,7 +42,8 @@ Route::group(['middleware' => 'auth:user'], function () {
 Route::group(['middleware' => 'auth:admin'], function () {
 
     Route::get('/admin', [AdminController::class, 'getName']);
-    Route::view('/action', 'action');
+    Route::post('/addItem', [AdminController::class, 'addItem']);
+    Route::get('/action', [AdminController::class, 'getNameForEdit']);
     Route::view('/update', 'update');
     
 });

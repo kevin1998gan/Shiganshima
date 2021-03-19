@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="../css/action.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
+
 <body>
     <!-- Logo
     =========================================== -->
@@ -23,15 +25,15 @@
     <div class="nabi">
         <div class="back"><a href="/admin">Back</a></div>
         <div class="logout">
-            <a href="{{ url('logout') }}" 
-				onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-					Logout Here
-			</a>
+            <a href="{{ url('logout') }}"
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                Logout Here
+            </a>
             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
-                    @csrf
+                @csrf
             </form>
         </div>
-        <div class="myname">Admin Name</div>
+        <div class="myname">{{ $user['name'] }}</div>
         <div class="today">Today is <span id="today"></span></div>
     </div>
 
@@ -41,31 +43,36 @@
     <div class="container">
         <div class="row justify-content-center">
 
-            <table class="table" id= "table">
+            <table class="table" id="table">
                 <input type='hidden' id='sort' value='asc'>
                 <thead>
                     <tr>
                         <th><span style="cursor: pointer;" onclick=''>Index</span></th>
-                        <th><span style="cursor: pointer;"onclick=''>Item Name</span></th>
-                        <th><span style="cursor: pointer;"onclick=''>Price</span></th>
-                        <th><span style="cursor: pointer;"onclick=''>Photo URL</span></th>
-                        <th><span style="cursor: pointer;"onclick=''>Quantity</span></th>
-						<th><span style="cursor: pointer;"onclick=''>Category</span></th>
+                        <th><span style="cursor: pointer;" onclick=''>Item Name</span></th>
+                        <th><span style="cursor: pointer;" onclick=''>Price</span></th>
+                        <th><span style="cursor: pointer;" onclick=''>Photo URL</span></th>
+                        <th><span style="cursor: pointer;" onclick=''>Quantity</span></th>
+                        <th><span style="cursor: pointer;" onclick=''>Category</span></th>
+                        <th><span style="cursor: pointer;" onclick=''>Description</span></th>
                         <th colspan="2">Action</th>
                     </tr>
                 </thead>
-                <tr>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-					<td>6</td>
-                    <td>
-                        <a href="/update" class="btn btn-info">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
+
+                @foreach ($items as $item)
+                    <tr>
+                        <td>{{ $loop->iteration }} </td>
+                        <td>{{$item['name']}}</td>
+                        <td>{{$item['price']}}</td>
+                        <td>{{$item['image']}}</td>
+                        <td>{{$item['quantity']}}</td>
+                        <td>{{$item['category']}}</td>
+                        <td>{{$item['description']}}</td>
+                        <td>
+                            <a href="/update" class="btn btn-info">Edit</a>
+                            <a href="" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
             </table>
         </div>
     </div>
@@ -73,7 +80,8 @@
 
     <!-- Import for today
     =========================================== -->
-    <script src="../javascript/today.js"></script>
+    <script src="../js/today.js"></script>
 
 </body>
+
 </html>

@@ -124,9 +124,9 @@ main {
 
 /* Form styling
 =========================================== */
-#title,
+#name,
 #price,
-#photo,
+#image,
 #quantity,
 #category,
 #description {
