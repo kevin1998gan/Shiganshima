@@ -44,7 +44,8 @@
 			</div>
 			<div class="form-group">
 				<button type="submit" name="update" class="btn btn-info">Update</button>
-				<button name="cancel" class="btn btn-danger">Cancel</button>
+				<a class = "btn btn-danger"  href = "/action">Cancel</a>
+
 			</div>
 		</form>
 	</div>

@@ -69,7 +69,7 @@
                         <td>{{$item['description']}}</td>
                         <td>
                             <a href={{"/update/" .$item['id']}} class="btn btn-info">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href={{"/delete/" .$item['id']}} class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach

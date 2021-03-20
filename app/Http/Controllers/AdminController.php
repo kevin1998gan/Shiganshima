@@ -72,4 +72,10 @@ class AdminController extends Controller
 
         return redirect("/action");
     }
+    function deleteItem($id)
+    {
+        $data = Item::find($id);
+        $data->delete();
+        return redirect("/action");
+    }
 }
