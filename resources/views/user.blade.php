@@ -34,18 +34,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
                 <div class="box">
@@ -55,18 +55,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
                 <div class="box">
@@ -76,18 +76,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
                 <div class="box">
@@ -97,18 +97,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
                 <div class="box">
@@ -118,18 +118,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
                 <div class="box">
@@ -139,18 +139,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
                 <div class="box">
@@ -160,18 +160,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
                 <div class="box">
@@ -181,18 +181,18 @@
                         <!--overlayer---------->
                         <div class="overlay">
                             <!--buy-btn------>
-                            <a href="#" class="buy-btn">Buy Now</a>
+                            <a href="/item/women" class="buy-btn">Buy Now</a>
                         </div>
                     </div>
                     <!--detail-box--------->
                     <div class="detail-box">
                         <!--type-------->
                         <div class="type">
-                            <a href="#">Rabbed Cardigan</a>
+                            <a href="/item/women">Rabbed Cardigan</a>
                             <span>Noe Arrival</span>
                         </div>
                         <!--price-------->
-                        <a href="#" class="price">$23</a>
+                        <a href="/item/women" class="price">$23</a>
                     </div>
                 </div>
             </div>
