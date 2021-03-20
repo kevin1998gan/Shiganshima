@@ -27,7 +27,7 @@ class AdminController extends Controller
     public function getNameForEdit()
     {
         $user = Auth::guard('admin')->user();
-        $item = Item::paginate(10);
+        $item = Item::all();
         return view('/action', ['user' => $user, 'items' => $item]);
     }
 

@@ -1,0 +1,257 @@
+/* == global styles ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+
+.w-5{
+display: none
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* == header ================================================================ */
+header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.header-up {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 14%;
+  align-items: center;
+}
+
+.logo {
+  width: fit-content;
+  transform: translateX(11%);
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+}
+
+.logo:hover {
+  color: gray;
+}
+
+.app-btn {
+  height: fit-content;
+}
+
+.logo-up {
+  font-size: 36px;
+  font-family: "MS PGothic", Osaka, Arial, sans-serif;
+}
+.logo-down {
+  font-size: 12px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.btn-panel {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.header-down ul {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header-down ul li {
+  transition: text-decoration 0.3s ease-in;
+  cursor: pointer;
+}
+
+.header-down ul li:hover {
+  text-decoration: underline;
+}
+
+/* == end header ============================================================ */
+
+/* == footer ================================================================ */
+footer {
+  border-top: 1px solid #000;
+  font-size: 12px;
+}
+
+.footer-up {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.footer-title {
+  text-transform: uppercase;
+  margin: 50px 0 25px;
+}
+
+.footer-group {
+  width: 200px;
+  padding: 10px 15px 70px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+footer li {
+  list-style-type: none;
+  display: block;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+}
+
+footer li:hover {
+  color: gray;
+}
+
+.newsletter {
+  width: 400px;
+}
+
+.newsletter .footer-title {
+  margin-bottom: 10px;
+}
+
+.footer-para {
+  font-size: 11px;
+}
+
+.footer-para span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.email-input {
+  padding: 5px 8px;
+  outline: none;
+  width: 250px;
+  margin-top: 15px;
+}
+
+.footer-down {
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  background: black;
+}
+
+.logo-footer {
+  margin: 50px auto 0;
+}
+/* == end footer ============================================================ */
+main {
+  width: 100%;
+  padding: 100px 0;
+}
+
+.container {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.left {
+  width: 400px;
+  border-right: 1px solid #eee;
+  padding-right: 70px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.samp-pic {
+  border-radius: 3px;
+}
+
+.right {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 34px 0 0 4rem;
+}
+
+.item {
+  /* box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2); */
+  padding: 0 20px 20px;
+  border-radius: 5px;
+  height: fit-content;
+  border: 1px solid #eee;
+  margin: 0 3rem 3rem 0;
+}
+
+.info {
+  padding: 5px;
+}
+
+.name {
+  font-weight: 800;
+  padding: 5px 0;
+  max-width: 190px;
+}
+
+.price {
+  padding: 5px 0;
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.quantity {
+  flex-grow: 1;
+}
+
+.qty {
+  outline: none;
+  padding: 3px 5px;
+  border: none;
+  width: 100%;
+}
+
+.avatar {
+  height: 200px;
+  overflow: hidden;
+}
+
+.btn {
+  flex-basis: 50px;
+  cursor: pointer;
+  text-align: center;
+  background: #eee;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #DEE2FF;
+}
+
+.result {
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  font-size: 12px;
+  color: gray;
+}

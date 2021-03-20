@@ -23,8 +23,17 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
         $this->registerPolicies();
 
-        //
+        /* define an non-member user role */
+        Gate::define('non-member', function ($user) {
+            return $user->role == 'non-member';
+        });
+
+        /* define an member user role */
+        Gate::define('member', function ($user) {
+            return $user->role == 'member';
+        });
     }
 }
