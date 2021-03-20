@@ -1,5 +1,3 @@
-
-
 body {
     background-color: darkgray;
 }
@@ -11,7 +9,7 @@ body {
 =========================================== */
 .partial-landing {
     height: 650px;
-    background-image: url('/img/admin/bg1.jpg');
+    background-image: url("/img/admin/bg1.jpg");
     position: relative;
 
     background-repeat: no-repeat;
@@ -25,14 +23,14 @@ body {
     letter-spacing: 6px;
 }
 .logo:hover {
-	color: gray;
+    color: gray;
 }
 .logo-up {
-	font-size: 40px;
-	font-family: "MS PGothic", Osaka, Arial, sans-serif;
+    font-size: 40px;
+    font-family: "MS PGothic", Osaka, Arial, sans-serif;
 }
 .logo-down {
-	font-size: 20px;
+    font-size: 20px;
 }
 .user {
     position: absolute;
@@ -65,7 +63,6 @@ body {
 .edit:hover,
 .delete:hover {
     border-bottom: 2px solid white;
-    
 }
 .admin {
     position: absolute;
@@ -81,7 +78,7 @@ body {
 main {
     height: 75px;
     position: relative;
-	background-image: linear-gradient(to right, #4c5a74, #080808);
+    background-image: linear-gradient(to right, #4c5a74, #080808);
 }
 .welcom {
     position: absolute;
@@ -89,7 +86,6 @@ main {
     left: 100px;
     transform: translateY(-50%);
     font-size: 21px;
-    
 }
 .today {
     position: absolute;
@@ -105,23 +101,28 @@ main {
     overflow: hidden;
     position: relative;
     height: 805px;
-	background-color: dimgrey;
+    background-color: dimgrey;
 }
 .hidden h1 {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 28px;
 }
 .insert-form {
     position: absolute;
-    top: 165px;
+    top: 105px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
 }
-
+.err-container {
+    background-color: antiquewhite;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+}
 /* Form styling
 =========================================== */
 #name,
@@ -143,7 +144,6 @@ main {
     border-style: inset;
     border-color: initial;
     border-image: initial;
-
 }
 #submit {
     padding: 10px 15px;
@@ -200,7 +200,7 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 /* Enable smooth scrolling
@@ -221,10 +221,12 @@ html {
 a {
     text-decoration: none;
     color: inherit;
-    font-size: inherit
+    font-size: inherit;
 }
 
-table, tr, td {
+table,
+tr,
+td {
     padding: 5px;
 }
 
