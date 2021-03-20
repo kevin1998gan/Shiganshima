@@ -53,7 +53,8 @@ Route::group(['middleware' => 'auth:admin'], function () {
 Route::group(['middleware' => 'auth:user'], function () {
 
     Route::view('/user', 'user');
-    Route::get('/men/{category}',  [ItemController::class, 'getItemList']);
+    Route::get('/item/{category}',  [ItemController::class, 'getItemList']);
+    Route::post('/buyItem/{id}',  [ItemController::class, 'buyItem']);
 });
 
 

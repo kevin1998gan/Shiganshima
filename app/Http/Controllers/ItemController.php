@@ -15,6 +15,15 @@ class ItemController extends Controller
     public function getItemList($category)
     {
         $item = Item::where('category', '=',$category)->paginate(4);
-        return view('/men', ['items' => $item]);
+        return view('/item', ['items' => $item, 'category'=>$category]);
+    }
+
+    public function buyItem(Request $req){
+        $data = Item::find($req->id);
+        $remaining = ($data->quantity - $req->qty);
+        $data->quantity = $remaining;
+        $data->save();
+        
+        return redirect('/item/men')->with('success', true)->with('message','You have successfully purchased selected item!');
     }
 }

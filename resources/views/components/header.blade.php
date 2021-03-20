@@ -22,16 +22,16 @@
     <div class="header-down">
         <ul class="navPage">
             <li class="navPage-item"><a href="/user">Home</a></li>
-            <li class="navPage-item"><a href="/men/men">men</a></li>
-            <li class="navPage-item">women</li>
-            <li class="navPage-item">kids</li>
-            <a class="dropdown-item" href="{{ url('logoutUser') }}" 
-                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-                <form id="logout-form" action="{{ url('logoutUser') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+            <li class="navPage-item"><a href="/item/men">men</a></li>
+            <li class="navPage-item"><a href="/item/women">women</a></li>
+            <li class="navPage-item"><a href="/item/kids">kids</a></li>
+            <li class="navPage-item" href="{{ url('logoutUser') }}"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </li>
+            <form id="logout-form" action="{{ url('logoutUser') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </ul>
     </div>
 </header>
