@@ -7,35 +7,40 @@
 
 <body>
 	<div class="row justify-content-center">
-		<form action="" method="POST">
+		<form action={{"/updateItem/".$data['id']}} method="POST">
+			@csrf
 			<input type="hidden" name="Id" value="">
 			<div class="form-group">
 				<label>Item Name</label>
-				<input type="text" name="Title" class="form-control" value="" placeholder="Enter item name" required>
+				<input type="text" name="name" class="form-control" value="{{$data['name']}}" id="name" placeholder="Enter item name" required>
+				<span style="color: red">@error('name'){{ $message }}@enderror</span>
 			</div>
 			<div class="form-group">
 				<label>Price</label>
-				<input type="text" name="Author" class="form-control" value="" placeholder="Enter price" required>
+				<input type="text" name="price" class="form-control" value="{{$data['price']}}" id="price" placeholder="Enter price" required>
+				<span style="color: red">@error('price'){{ $message }}@enderror</span>
 			</div>
 			<div class="form-group">
 				<label>Photo URL</label>
-				<input type="text" name="Photo" class="form-control" value="" placeholder="Enter photo URL" required>
+				<input type="text" name="image" class="form-control" value="{{$data['image']}}" id ="image" placeholder="Enter photo URL" required>
+				<span style="color: red">@error('image'){{ $message }}@enderror</span>
 			</div>
 			<div class="form-group">
 				<label>Quantity</label>
-				<input type="number" name="Quantity" class="form-control" value="" placeholder="Enter quantity" required>
+				<input type="number" name="quantity" class="form-control" value="{{$data['quantity']}}" id ="quantity" placeholder="Enter quantity" required>
+				<span style="color: red">@error('quantity'){{ $message }}@enderror</span>
 			</div>
 			<div class="form-group">
 				<label>Category</label>
-				<select name="Category" class="form-control" value="" placeholder="Choose category" required>
-					<option value="Men">Men</option>
-					<option value="Women">Women</option>
-					<option value="Kids">Kids</option>
+				<select name="category" class="form-control" placeholder="Choose category" id="category" required>
+					<option value="Men" {{ $data['category'] == 'Men' ? 'selected' : '' }}>Men</option>
+					<option value="Women" {{ $data['category'] == 'Women' ? 'selected' : '' }}>Women</option>
+					<option value="Kids" {{ $data['category'] == 'Kids' ? 'selected' : '' }}>Kids</option>
                 </select>
 			</div>
 			<div class="form-group">
 				<label>Description</label>
-				<textarea class="form-control" name="Description" rows="3" placeholder="Enter description"></textarea>
+				<textarea class="form-control" name="description" rows="3" placeholder="Enter description" value = "{{$data['description']}}" id='description'></textarea>
 			</div>
 			<div class="form-group">
 				<button type="submit" name="update" class="btn btn-info">Update</button>

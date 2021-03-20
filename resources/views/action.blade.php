@@ -68,7 +68,7 @@
                         <td>{{$item['category']}}</td>
                         <td>{{$item['description']}}</td>
                         <td>
-                            <a href="/update" class="btn btn-info">Edit</a>
+                            <a href={{"/update/" .$item['id']}} class="btn btn-info">Edit</a>
                             <a href="" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>

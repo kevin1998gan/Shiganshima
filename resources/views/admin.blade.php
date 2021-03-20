@@ -46,7 +46,7 @@
     =========================================== -->
     <main>
         <div class="welcom">
-            <marquee>Backend Empowered by [redacted]. Explore.</marquee>
+            <marquee>Add Some New Item to the Website Here!</marquee>
         </div>
         <div class="today">
             Today is <span id="today"></span>
@@ -59,12 +59,7 @@
     <div class="hidden" id="here">
         <h1>Add an Item, Administrator</h1>
 
-        @if (session()->has('alter'))
-            <script>
-                alert({{ session()->get('alert') }});
 
-            </script>
-        @endif
 
 
 
