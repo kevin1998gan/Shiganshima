@@ -239,6 +239,9 @@ main {
     background: #eee;
     font-size: 14px;
     transition: background 0.2s;
+    height: 24px;
+    line-height: 24px;
+    border: none;
 }
 
 .btn:hover {
