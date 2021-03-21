@@ -71,7 +71,7 @@
             </div>
             <div class="right">
                 <div class="result">
-                    Displaying 4 items of {{ count($items) }} results.
+                    Displaying {{ count($items) }} items of {{ count($items) }} results.
                 </div>
                 @foreach ($items as $item)
                     <div class="item">
