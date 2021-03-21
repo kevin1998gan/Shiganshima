@@ -92,8 +92,8 @@
                                     RM {{ $item['price'] * 0.8 }}
                                 </div>
                             @endcan
-                            <div class="quantity">
-                                Available: {{ $item['quantity'] }}
+                            <div class="quantity" style="margin-bottom: 5px;">
+                                Available: <span class="countt">{{ $item['quantity'] }}</span>
                             </div>
                             <form class="buy" action={{ '/buyItem/' . $item['id'] }} method="POST">
                                 @csrf
