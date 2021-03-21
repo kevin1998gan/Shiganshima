@@ -253,3 +253,7 @@ main {
     color: gray;
     width: 500px;
 }
+
+.description {
+    margin-top: 20px;
+}
