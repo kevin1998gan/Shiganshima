@@ -1,0 +1,62 @@
+/* == header ================================================================ */
+header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.header-up {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 14%;
+    align-items: center;
+}
+
+.logo {
+    width: fit-content;
+    transform: translateX(11%);
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+.logo:hover {
+    color: gray;
+}
+
+.app-btn {
+    height: fit-content;
+}
+
+.logo-up {
+    font-size: 36px;
+    font-family: "MS PGothic", Osaka, Arial, sans-serif;
+}
+.logo-down {
+    font-size: 12px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn-panel {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.header-down ul {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header-down ul li {
+    transition: text-decoration 0.3s ease-in;
+    cursor: pointer;
+}
+
+.header-down ul li:hover {
+    text-decoration: underline;
+}
+
+/* == end header ============================================================ */
