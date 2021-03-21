@@ -20,6 +20,8 @@ use App\Http\Controllers\ItemController;
 
 Auth::routes();
 
+Route::view('/', 'home');
+
 Route::get('/login/admin', [LoginController::class, 'showAdminLoginForm']);
 
 Route::get('/login/user', [LoginController::class, 'showUserLoginForm']);
