@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Book.io | Action</title>
+    <title>shiganshina clothes | Action</title>
 
-    <!-- Imports
-    =========================================== -->
+    <!-- Imports -->
     <link rel="stylesheet" href="../css/action.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 
 <body>
-    <!-- Logo
-    =========================================== -->
+    <!-- Logo -->
     <header>
         <div class="logo">シガンシナ</div>
         <div class="cute">shiganshina clothes</div>
     </header>
 
-    <!-- Small Nav
-    =========================================== -->
+    <!-- Small Nav -->
     <div class="nabi">
-        <div class="back"><a href="/admin">Back</a></div>
+        <div class="back"><a href="/admin" class="ignore">Back</a></div>
         <div class="logout">
             <a href="{{ url('logout') }}"
-                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                class="ignore">
                 Logout Here
             </a>
             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
@@ -38,8 +36,7 @@
     </div>
 
 
-    <!-- Result table shows here
-    =========================================== -->
+    <!-- Result table shows here -->
     <div class="container">
         <div class="row justify-content-center">
 
@@ -48,13 +45,13 @@
                 <thead>
                     <tr>
                         <th><span style="cursor: pointer;" onclick=''>Index</span></th>
-                        <th><span style="cursor: pointer;" onclick=''>Item Name</span></th>
+                        <th style="min-width: 100px;"><span style="cursor: pointer;" onclick=''>Item Name</span></th>
                         <th><span style="cursor: pointer;" onclick=''>Price</span></th>
                         <th><span style="cursor: pointer;" onclick=''>Photo URL</span></th>
                         <th><span style="cursor: pointer;" onclick=''>Quantity</span></th>
                         <th><span style="cursor: pointer;" onclick=''>Category</span></th>
                         <th><span style="cursor: pointer;" onclick=''>Description</span></th>
-                        <th colspan="2">Action</th>
+                        <th colspan="2" style="text-align: center;">Action</th>
                     </tr>
                 </thead>
 
@@ -69,6 +66,8 @@
                         <td>{{$item['description']}}</td>
                         <td>
                             <a href={{"/update/" .$item['id']}} class="btn btn-info">Edit</a>
+                        </td>
+                        <td>
                             <a href={{"/delete/" .$item['id']}} class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
@@ -78,8 +77,7 @@
     </div>
 
 
-    <!-- Import for today
-    =========================================== -->
+    <!-- Import for today -->
     <script src="../js/today.js"></script>
 
 </body>

@@ -1,4 +1,3 @@
-
 /* To override from bootstrap
 =========================================== */
 * {
@@ -20,17 +19,17 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 56px;
     letter-spacing: 6px;
-	font-weight: bold;
+    font-weight: bold;
 }
 .cute {
     position: absolute;
     bottom: 48px;
     left: 50%;
     font-size: 18px;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
 }
 
 /* Small navbar
@@ -49,6 +48,14 @@ header {
 .logout {
     cursor: pointer;
 }
+.ignore {
+    text-decoration: none;
+    color: black;
+}
+.ignore:hover {
+    text-decoration: none;
+    color: black;
+}
 .container {
     margin-top: 50px;
 }
@@ -59,7 +66,7 @@ header {
     position: relative;
 }
 .nabi > div::after {
-    content: '';
+    content: "";
     position: absolute;
     transition: all 0.4s ease-in;
     bottom: 0;
