@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clothes. Shiganshina.</title>
     <script src="https://kit.fontawesome.com/047746317e.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/product.css" />
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" --}}
+        {{-- integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --}}
+    <link rel="stylesheet" type="text/css" href="/css/product.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
 <body>
@@ -46,7 +49,7 @@
             <!--  -->
 
             <div class="left">
-                <div class="title" style="text-transform:capitalize">
+                <div class="title" style="text-transform:uppercase">
                     @if ($category == 'men' || $category == 'women')
                         {{ $category }}'s
                     @elseif ($category == 'kids' )
@@ -71,7 +74,7 @@
             </div>
             <div class="right">
                 <div class="result">
-                    Displaying 4 items of {{ count($items) }} results.
+                    Displaying {{ count($items) }} items of {{ count($items) }} results.
                 </div>
                 @foreach ($items as $item)
                     <div class="item">
@@ -91,8 +94,8 @@
                                     RM {{ $item['price'] * 0.8 }}
                                 </div>
                             @endcan
-                            <div class="quantity">
-                                Available: {{ $item['quantity'] }}
+                            <div class="quantity" style="margin-bottom: 5px;">
+                                Available: <span class="countt">{{ $item['quantity'] }}</span>
                             </div>
                             <form class="buy" action={{ '/buyItem/' . $item['id'] }} method="POST">
                                 @csrf
@@ -113,7 +116,4 @@
     <x-footer />
 
 </body>
-
-
-
 </html>

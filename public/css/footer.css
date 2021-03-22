@@ -1,0 +1,70 @@
+/* == footer ================================================================ */
+footer {
+    border-top: 1px solid #000;
+    font-size: 12px;
+}
+
+.footer-up {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    margin: 50px 0 25px;
+}
+
+.footer-group {
+    width: 200px;
+    padding: 10px 15px 70px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer li {
+    list-style-type: none;
+    display: block;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+footer li:hover {
+    color: gray;
+}
+
+.newsletter {
+    width: 400px;
+}
+
+.newsletter .footer-title {
+    margin-bottom: 10px;
+}
+
+.footer-para {
+    font-size: 11px;
+}
+
+.footer-para span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.email-input {
+    padding: 5px 8px;
+    outline: none;
+    width: 250px;
+    margin-top: 15px;
+}
+
+.footer-down {
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    background: black;
+}
+
+.logo-footer {
+    margin: 50px auto 0;
+}
+/* == end footer ============================================================ */
