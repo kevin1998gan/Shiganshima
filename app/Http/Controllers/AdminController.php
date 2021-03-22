@@ -36,7 +36,7 @@ class AdminController extends Controller
         $validator = Validator::make($req->all(), [
             'name' => 'required',
             'price' => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/',
-            'image' => 'required',
+            'image' => 'required|max:255',
             'quantity' => 'required|numeric|min:1|max:99'
         ])->validate();
 
@@ -57,7 +57,7 @@ class AdminController extends Controller
         $validator = Validator::make($req->all(), [
             'name' => 'required',
             'price' => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/',
-            'image' => 'required',
+            'image' => 'required|max:255',
             'quantity' => 'required|numeric|min:1|max:99'
         ])->validate();
 

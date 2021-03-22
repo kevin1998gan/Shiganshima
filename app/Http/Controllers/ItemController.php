@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Models\Item;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use Auth;
 use DB;
 
@@ -23,7 +24,7 @@ class ItemController extends Controller
         $remaining = ($data->quantity - $req->qty);
         $data->quantity = $remaining;
         $data->save();
-        
-        return redirect('/item/men')->with('success', true)->with('message','You have successfully purchased selected item!');
+        $cat = Str::lower($data->category);
+        return redirect('/item/'.$cat)->with('success', true)->with('message','You have successfully purchased selected item!');
     }
 }
