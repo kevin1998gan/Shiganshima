@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\HistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,8 @@ Route::group(['middleware' => 'auth:user'], function () {
     Route::get('/item/{category}',  [ItemController::class, 'getItemList']);
     Route::post('/buyItem/{id}',  [ItemController::class, 'buyItem']);
     Route::post('/buyItemMember/{id}',  [ItemController::class, 'buyItemMember']);
+    Route::get('/history',  [HistoryController::class, 'getHistoryList']);
+    Route::post('/joinMember',  [HistoryController::class, 'joinMember']);
 });
 
 

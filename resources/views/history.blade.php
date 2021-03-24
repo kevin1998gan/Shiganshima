@@ -44,10 +44,41 @@
 
             </div>
             <!--  -->
+            <div class = "left">
+                <div class="title" style="text-transform:uppercase">
+                    @can('member')
+                    Enjoy Items Discounts of 20%!
+                    @elsecan('non-member')
+                    Become a Member Now!
+                    <form class="join" action='/joinMember' method="POST">
+                        @csrf
+                        <button type="submit" name="submit" class="btn btn-success">Join!</button>
+                    </form>
+                    @endcan
+                </div>
+            </div>
 
-        </div>
+            <div class = "right">
+                @foreach ($histories as $history)
+                    <div class="item">
+                        <div class="avatar">
+                            <img src={{ $history['image'] }} width="200" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                {{ $history['name'] }}<br>
+                                Total Price: {{ $history['price'] }}<br>
+                                Amount Purchased: {{ $history['amount_purchased'] }}<br>
+                                Purchased On: {{ $history['created_at'] }}<br>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                {{ $histories->links() }}
+            </div>
     </main>
     <x-footer />
 
 </body>
+
 </html>

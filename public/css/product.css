@@ -264,3 +264,18 @@ main {
 .countt {
     color: green;
 }
+
+.btn-success {
+    padding: auto;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.outOfStock {
+    position: absolute;
+    top: 0;
+    left: 4rem;
+    font-size: 25px;
+    color: gray;
+    width: 500px;
+}

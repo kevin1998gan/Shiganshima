@@ -25,6 +25,7 @@
             <li class="navPage-item"><a href="/item/men">men</a></li>
             <li class="navPage-item"><a href="/item/women">women</a></li>
             <li class="navPage-item"><a href="/item/kids">kids</a></li>
+            <li class="navPage-item"><a href="/history">History</a></li>
             <li class="navPage-item" href="{{ url('logoutUser') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}

@@ -16,12 +16,13 @@ class ItemController extends Controller
 {
     public function getItemList($category)
     {
-        $item = Item::where('category', '=', $category)->paginate(4);
+        $item = Item::where('category', '=', $category)->where("quantity", ">", 0)->paginate(4);
         return view('/item', ['items' => $item, 'category' => $category]);
     }
 
     public function buyItem(Request $req)
     {
+        $user = Auth::guard('user')->user();
         $data = Item::find($req->id);
         $remaining = ($data->quantity - $req->qty);
         $data->quantity = $remaining;
@@ -32,15 +33,17 @@ class ItemController extends Controller
         $history = new History;
         $history->name = $data->name;
         $history->price = $data->price * $req->qty;
+        $history->image = $data->image;
         $history->amount_purchased = $req->qty;
-        $history->user_id = $req->id;
-
-
+        $history->user_id = $user->id;
+        $history->save();
         return redirect('/item/' . $cat)->with('success', true)->with('message', 'You have successfully purchased selected item!');
     }
 
     public function buyItemMember(Request $req)
     {
+
+        $user = Auth::guard('user')->user();
         $data = Item::find($req->id);
         $remaining = ($data->quantity - $req->qty);
         $data->quantity = $remaining;
@@ -53,7 +56,7 @@ class ItemController extends Controller
         $history->price = ($data->price * 0.8) * $req->qty;
         $history->image = $data->image;
         $history->amount_purchased = $req->qty;
-        $history->user_id = $req->id;
+        $history->user_id = $user->id;
         $history->save();
         return redirect('/item/' . $cat)->with('success', true)->with('message', 'You have successfully purchased selected item!');
     }

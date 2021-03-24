@@ -72,6 +72,8 @@
                     Comfortable! Stylish! Cool!
                 </div>
             </div>
+
+            @if (count($items) > 0 )
             <div class="right">
                 <div class="result">
                     Displaying {{ count($items) }} items of {{ count($items) }} results.
@@ -119,8 +121,13 @@
                 @endforeach
                 {{ $items->links() }}
             </div>
-
-
+            @else
+            <div class="right">
+                <div class="outOfStock">
+                    Out of Stock
+                </div>
+            </div>
+            @endif
         </div>
     </main>
     <x-footer />
