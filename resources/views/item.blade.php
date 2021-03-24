@@ -8,7 +8,7 @@
     <title>Clothes. Shiganshina.</title>
     <script src="https://kit.fontawesome.com/047746317e.js" defer></script>
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" --}}
-        {{-- integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --}}
+    {{-- integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --}}
     <link rel="stylesheet" type="text/css" href="/css/product.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> --}}
@@ -97,13 +97,23 @@
                             <div class="quantity" style="margin-bottom: 5px;">
                                 Available: <span class="countt">{{ $item['quantity'] }}</span>
                             </div>
-                            <form class="buy" action={{ '/buyItem/' . $item['id'] }} method="POST">
-                                @csrf
-                                <div class="quantity">
-                                    <input type="number" min="1" max="99" value="1" id="qty" class="qty" name="qty">
-                                </div>
-                                <button type="submit" name="submit" class="btn">Buy</button>
-                            </form>
+                            @can('non-member')
+                                <form class="buy" action={{ '/buyItem/' . $item['id'] }} method="POST">
+                                    @csrf
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="99" value="1" id="qty" class="qty" name="qty">
+                                    </div>
+                                    <button type="submit" name="submit" class="btn">Buy</button>
+                                </form>
+                                @elsecan('member')
+                                <form class="buy" action={{ '/buyItemMember/' . $item['id'] }} method="POST">
+                                    @csrf
+                                    <div class="quantity">
+                                        <input type="number" min="1" max="99" value="1" id="qty" class="qty" name="qty">
+                                    </div>
+                                    <button type="submit" name="submit" class="btn">Buy</button>
+                                </form>
+                            @endcan
                         </div>
                     </div>
                 @endforeach
@@ -116,4 +126,5 @@
     <x-footer />
 
 </body>
+
 </html>

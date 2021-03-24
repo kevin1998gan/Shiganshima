@@ -57,6 +57,7 @@ Route::group(['middleware' => 'auth:user'], function () {
     Route::view('/user', 'user');
     Route::get('/item/{category}',  [ItemController::class, 'getItemList']);
     Route::post('/buyItem/{id}',  [ItemController::class, 'buyItem']);
+    Route::post('/buyItemMember/{id}',  [ItemController::class, 'buyItemMember']);
 });
 
 
