@@ -266,11 +266,14 @@ main {
 }
 
 .btn-success {
-    padding: auto;
+    padding: 0.5em 1.75em;
     color: #fff;
     background-color: #28a745;
-    border-color: #28a745;
+    border-radius: 12.5%;
+    border: #28a745;
+    font-weight: bold;
 }
+
 .outOfStock {
     position: absolute;
     top: 0;
