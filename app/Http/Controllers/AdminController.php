@@ -40,8 +40,17 @@ class AdminController extends Controller
             'quantity' => 'required|numeric|min:1|max:99'
         ])->validate();
 
-        $item = $req->all();
-        Item::create($item);
+        $user = Auth::guard('admin')->user();
+        $item = new Item;
+        $item->name = $req->name;
+        $item->price=$req->price;
+        $item->image=$req->image;
+        $item->quantity = $req->quantity;
+        $item ->category = $req->category;
+        $item ->description = $req->description;
+        $item->created_by = $user->name;
+        $item->user_id = $user->id;
+        $item->save();
         return redirect('/admin');
     }
 

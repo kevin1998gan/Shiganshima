@@ -20,6 +20,8 @@ class CreateItemsTable extends Migration
             $table->string('image');
             $table->integer('quantity');
             $table->string('category');
+            $table->string('created_by');
+            $table->integer('user_id');
             $table->string('description')->nullable();
             $table->timestamps();
         });

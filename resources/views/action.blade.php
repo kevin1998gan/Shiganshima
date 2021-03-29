@@ -51,6 +51,7 @@
                         <th><span style="cursor: pointer;" onclick=''>Quantity</span></th>
                         <th><span style="cursor: pointer;" onclick=''>Category</span></th>
                         <th><span style="cursor: pointer;" onclick=''>Description</span></th>
+                        <th><span style="cursor: pointer;" onclick=''>Created By</span></th>
                         <th colspan="2" style="text-align: center;">Action</th>
                     </tr>
                 </thead>
@@ -64,6 +65,7 @@
                         <td>{{$item['quantity']}}</td>
                         <td>{{$item['category']}}</td>
                         <td>{{$item['description']}}</td>
+                        <td>{{$item['created_by']}}</td>
                         <td>
                             <a href={{"/update/" .$item['id']}} class="btn btn-info">Edit</a>
                         </td>
