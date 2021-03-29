@@ -52,7 +52,7 @@
                     Become a Member Now!
                     <form class="join" action='/joinMember' method="POST">
                         @csrf
-                        <button type="submit" name="submit" class="btn btn-success">Join!</button>
+                        <button type="submit" name="submit" class="btn-success">Join!</button>
                     </form>
                     @endcan
                 </div>
