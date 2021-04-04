@@ -67,7 +67,9 @@
                                         <button type="submit" class="btn btn-primary">
                                             {{ __('Login') }}
                                         </button>
+                                        @if($url === "user")
                                         <a href='{{ url("register/$url") }}'>Don't have an Account?</a>
+                                        @endif
                                     </div>
                                 </div>
 
